@@ -181,8 +181,8 @@ void SerialOut::dumpFiles() {
    this->dumpEpromUInt32(FILES::CntxId, false);
    Serial.print(F("|Edge: "));
    this->dumpEpromStr(FILES::Edge, false);
-   Serial.print(F("|Gate: "));
-   this->dumpEpromStr(FILES::Gate, false);
+   Serial.print(F("|InstallDate: "));
+   this->dumpEpromStr(FILES::InstallDate, false);
    /* mark end of buffer */
    this->endTail();
 };

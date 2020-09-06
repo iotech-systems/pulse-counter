@@ -13,8 +13,9 @@ const uint16_t FAT[][2] =
    {196, 196},     /* 6, */
    {197, 229},     /* 7, */
    {230, 261},     /* 8, */
-   {512, 767},     /* 9, */
-   {768, 1024}};   /* 10, */
+   {262, 278},     /* 9, */
+   {512, 767},     /* 10, */
+   {768, 1024}};   /* 12, */
 
 
 enum FILES : uint8_t {
@@ -27,8 +28,9 @@ enum FILES : uint8_t {
    Debugflag = 6,        /* 1 byte */
    Edge = 7,             /* 32 bytes */
    Gate = 8,             /* 32 bytes */
-   BigBuff1 = 9,         /* 256 */
-   BigBuff2 = 10         /* 256 */
+   InstallDate = 9,      /* 16 bytes */
+   BigBuff1 = 10,        /* 256 */
+   BigBuff2 = 11         /* 256 */
 };
 
 #endif

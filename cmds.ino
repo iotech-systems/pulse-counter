@@ -54,6 +54,10 @@ void processInBuff() {
       String cmdval = readCommandValue();
       int rval = efs.saveString(FILES::Gate, cmdval);
       serout.dumpCmdRval(rval, cmdval);
+   } else if (SERIAL_IN_BUFF.startsWith(F("INSDATE:"))) {
+      String cmdval = readCommandValue();
+      int rval = efs.saveString(FILES::InstallDate, cmdval);
+      serout.dumpCmdRval(rval, cmdval); 
    } else if (SERIAL_IN_BUFF.startsWith(F("BADR:"))) {
       String cmdval = readCommandValue();
       int rval = efs.saveChar(FILES::BAdr, cmdval.c_str()[0]);
